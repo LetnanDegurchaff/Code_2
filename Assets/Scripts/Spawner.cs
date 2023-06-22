@@ -1,9 +1,9 @@
 using System.Collections;
 using UnityEngine;
 
-public class SpawnSystem : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _copyingObject;
+    [SerializeField] private Enemy _enemy;
 
     private SpawnPoint[] _points;
 
@@ -15,14 +15,16 @@ public class SpawnSystem : MonoBehaviour
 
     private IEnumerator Spawning()
     {
+        WaitForSeconds waitForSeconds = new WaitForSeconds(2f);
+
         while (true)
         {
             for (int i = 0; i < _points.Length; i++)
             {
-                _points[i].CreateObject(_copyingObject);
+                _points[i].CreateEnemy(_enemy);
                 Debug.Log($"Создался объект из спавнера {i}");
 
-                yield return new WaitForSeconds(2f);
+                yield return waitForSeconds;
             }
         }
     }

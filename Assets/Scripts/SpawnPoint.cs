@@ -2,20 +2,8 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
-    private Transform _tansform;
-
-    public Vector3 GetPosition()
+    public void CreateEnemy(Enemy enemy)
     {
-        return _tansform.position;
-    }
-
-    public void CreateObject(GameObject gameObject)
-    {
-        Instantiate(gameObject, _tansform.position, Quaternion.identity);
-    }
-
-    private void Start()
-    {
-        _tansform = GetComponent<Transform>();
+        Instantiate<Enemy>(enemy, transform.position, Quaternion.identity);
     }
 }

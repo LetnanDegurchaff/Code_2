@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 1687286377}
   - component: {fileID: 1687286376}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224a32e62c58d8141a89b0b600285e1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _copyingObject: {fileID: 8163448418298966446, guid: 26727272465dd454bb6f0bd791318565, type: 3}
+  _enemy: {fileID: -8602676518897932957, guid: 26727272465dd454bb6f0bd791318565, type: 3}
 --- !u!4 &1687286377
 Transform:
   m_ObjectHideFlags: 0
