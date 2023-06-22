@@ -10,10 +10,10 @@ public class Spawner : MonoBehaviour
     private void Start()
     {
         _points = GetComponentsInChildren<SpawnPoint>();
-        Coroutine spawnProcces = StartCoroutine(Spawning());
+        Coroutine spawnProcces = StartCoroutine(StartCreating());
     }
 
-    private IEnumerator Spawning()
+    private IEnumerator StartCreating()
     {
         WaitForSeconds waitForSeconds = new WaitForSeconds(2f);
 
