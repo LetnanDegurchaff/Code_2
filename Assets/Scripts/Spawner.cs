@@ -29,7 +29,6 @@ public class Spawner : MonoBehaviour
         }
     }
 
-
     public void CreateEnemy(Enemy enemy, Vector3 position)
     {
         Instantiate<Enemy>(enemy, position, Quaternion.identity);
